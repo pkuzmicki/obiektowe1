@@ -6,6 +6,10 @@ public class Main {
         Segment segment = new Segment(p1, p2);
         System.out.println(segment.toSvg());
 
-        Point[] points = new Point[10];
+    }
+    public void perpendicularTo(Segment segment, Point point) {
+
+
     }
 }
+
