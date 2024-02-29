@@ -1,10 +1,11 @@
 //https://github.com/lukaszkurantdev/programowanie_obiektowe
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        Point punkt = new Point(3,2);
-        System.out.println(punkt.x);
-        System.out.println(punkt.y);
-    }
+        Point p1 = new Point(10, 10);
+        Point p2 = new Point(100, 100);
+        Segment segment = new Segment(p1, p2);
+        System.out.println(segment.toSvg());
 
+        Point[] points = new Point[10];
+    }
 }
