@@ -7,9 +7,6 @@ public class Main {
         System.out.println(segment.toSvg());
 
     }
-    public void perpendicularTo(Segment segment, Point point) {
 
-
-    }
 }
 
