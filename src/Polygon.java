@@ -22,8 +22,12 @@ public class Polygon {
         for(Point point : arr)
             pointsString += point.x + "," + point.y + " ";
 
-        return String.format(Locale.ENGLISH,"<polygon points=\"%s\" />", pointsString);
+        return String.format(Locale.ENGLISH,"<polygon points=\"%s\"%s />", pointsString, style.toSvg());
     }
+
+//    static Polygon square(){
+//
+//    }
 
 
 }
