@@ -9,6 +9,7 @@ public class Main {
         //System.out.println(segment.toSvg());
         Point[] points = new Point[10];
 
+
     }
 
 }
