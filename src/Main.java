@@ -34,6 +34,7 @@
 //        }
 
 
+
 public class Main {
     public static void main(String[] args) {
         Vec2 point1 = new Vec2(0, 100);
