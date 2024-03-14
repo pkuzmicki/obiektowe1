@@ -1,4 +1,5 @@
 //https://github.com/lukaszkurantdev/programowanie_obiektowe
+//gist, repo, user, workflow
 
 //       Style style = new Style("purple", "pink", 10.0);
 //       Point vec21 = new Point(1, 100);
