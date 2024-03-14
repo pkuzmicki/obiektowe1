@@ -1,6 +1,6 @@
 import java.util.Locale;
 
-public class Polygon {
+public class Polygon implements Shape {
     private Vec2[] arr;
     Style style;
 
@@ -28,7 +28,7 @@ public class Polygon {
     static Polygon sqare(Segment line, Style style) {
         double x = (line.getP1().x + line.getP2().x) / 2;
         double y = (line.getP1().y + line.getP2().y) / 2;
-        Vec2 center = new Vec2(x, y);
+        Point center = new Point(x, y);
         Segment[] secondLine = Segment.perpendicular(line, center, line.getDistance() / 2);
 
         Polygon polygon = new Polygon(4, style);
@@ -37,5 +37,7 @@ public class Polygon {
         polygon.setPoint(2, line.getP2());
         polygon.setPoint(3, secondLine[1].getP2());
 
+        return polygon;
+    }
 
 }
