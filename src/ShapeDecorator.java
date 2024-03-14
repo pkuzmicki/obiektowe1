@@ -7,6 +7,6 @@ public class ShapeDecorator implements Shape {
 
     @Override
     public String toSvg(String parameters) {
-        return null;
+        return decoratedShape.toSvg(parameters);
     }
 }
