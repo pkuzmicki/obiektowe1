@@ -24,7 +24,7 @@ public class Style {
 
     }
     public String toSvg() {
-        return String.format(Locale.ENGLISH,"" +
+        return String.format(Locale.ENGLISH," " +
                         "style=\"stroke:%s;stroke-width:%f;fill:%s\"", strokeColor, strokeWidth, fillColor);
     }
 

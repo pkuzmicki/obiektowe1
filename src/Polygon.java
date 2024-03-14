@@ -9,26 +9,27 @@ public class Polygon implements Shape {
         this.style = style;
     }
 
-    public void setPoint(int index, Vec2 vec2) {
-        arr[index] = vec2;
+    public void setPoint(int index, Vec2 point) {
+        arr[index] = point;
     }
 
-    public void setPoints(Vec2[] vec2s){
-        arr = vec2s;
+    public void setPoints(Vec2[] points){
+        arr = points;
     }
 
-    public String toSvg() {
+    public String toSvg(String parameters) {
         String pointsString = "";
-        for(Vec2 vec2 : arr)
-            pointsString += vec2.x + "," + vec2.y + " ";
+        for(Vec2 point : arr)
+            pointsString += point.x + "," + point.y + " ";
 
-        return String.format(Locale.ENGLISH,"<polygon points=\"%s\"%s />", pointsString, style.toSvg());
+        return String.format(Locale.ENGLISH,"<polygon points=\"%s\"%s />",
+                pointsString, parameters);
     }
 
     static Polygon sqare(Segment line, Style style) {
         double x = (line.getP1().x + line.getP2().x) / 2;
         double y = (line.getP1().y + line.getP2().y) / 2;
-        Point center = new Point(x, y);
+        Vec2 center = new Vec2(x, y);
         Segment[] secondLine = Segment.perpendicular(line, center, line.getDistance() / 2);
 
         Polygon polygon = new Polygon(4, style);

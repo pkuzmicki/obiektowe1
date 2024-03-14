@@ -1,3 +1,3 @@
 public interface Shape {
-    public abstract String toSvg();
+    public abstract String toSvg(String parameters);
 }
