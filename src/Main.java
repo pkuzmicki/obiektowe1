@@ -32,6 +32,7 @@ public class Main {
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
 
+
         List<Person> list;
         try {
             list = Person.fromCsv("family.csv");
